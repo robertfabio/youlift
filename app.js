@@ -632,6 +632,16 @@
     });
   }
 
+  /* Para captura quadro a quadro: mostra o experimento parado num dia (0 a 14). */
+  function definirDia(d) {
+    if (estado.cena !== 3) irPara(3);
+    pararExperimento();
+    estado.exp.dia = Math.max(0, Math.min(DIAS, Math.round(Number(d))));
+    estado.exp.rodando = estado.exp.dia > 0 && estado.exp.dia < DIAS;
+    renderExperimento();
+    return Promise.resolve(true);
+  }
+
   function pular() {
     if (estado.cena !== 3) irPara(3);
     pararExperimento();
@@ -856,6 +866,7 @@
     rodar: rodarCena,
     definirQueda,
     pular,
+    definirDia,
     definirVolume,
     aprovar,
     reverter,
