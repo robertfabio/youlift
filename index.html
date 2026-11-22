@@ -1,166 +1,24 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YouLift — teste de ofertas no checkout</title>
+  <title>YouLift: teste de ofertas no checkout</title>
   <meta name="description" content="Protótipo de candidato com dados simulados: a IA sugere uma oferta no checkout, um experimento controlado mede o que sobra de verdade e uma trava pausa a oferta que derruba a conversão.">
   <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0B1830">
   <script>
-    /* Aplica o modo de gravação antes da primeira pintura (sem cursor, sem barra de rolagem). */
+    /* Modo de gravação aplicado antes da primeira pintura (sem cursor, sem barra de rolagem). */
     try { if (new URLSearchParams(location.search).get('gravar') === '1') document.documentElement.classList.add('gravar'); } catch (e) {}
   </script>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23030213'/%3E%3Cpath d='M8 22l8-13 8 13' fill='none' stroke='%239fef14' stroke-width='3.5'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B1830'/%3E%3Cpath d='M8 22l8-13 8 13' fill='none' stroke='%239fef14' stroke-width='3.5'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Londrina+Solid:wght@900&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-CD2HG35m.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-c9XUYrXs.css">
 </head>
 <body>
-
-  <div class="cabeca">
-    <div class="aviso" role="note">Protótipo de candidato · dados simulados · sem conexão com sistemas da YouShop</div>
-    <header class="topo">
-      <p class="marca">YouLift</p>
-      <nav class="passos" aria-label="Cenas do protótipo">
-        <button type="button" data-ir="1"><span class="n">1</span><span class="t">A conta</span></button>
-        <button type="button" data-ir="2"><span class="n">2</span><span class="t">Sugestões</span></button>
-        <button type="button" data-ir="3"><span class="n">3</span><span class="t">Experimento</span></button>
-        <button type="button" data-ir="4"><span class="n">4</span><span class="t">Decisão</span></button>
-      </nav>
-    </header>
-  </div>
-
-  <main id="palco">
-
-    <!-- Cena 1 — A conta -->
-    <section class="cena c1" id="cena-1" aria-labelledby="t1" hidden>
-      <div class="c1-esq">
-        <p class="lead" id="t1">O order bump, a oferta extra que aparece no checkout antes de pagar, só se paga se a conversão cair menos de</p>
-        <p class="heroi"><span class="valor" id="c1-eq">0,9</span><span class="unidade" id="c1-eq-un">ponto</span></p>
-        <p class="formula" id="c1-formula"></p>
-
-        <div class="regua" id="c1-regua">
-          <div class="regua-topo">
-            <label for="c1-queda">Queda de conversão causada pelo bump</label>
-            <output id="c1-queda-v" for="c1-queda">1,0 ponto</output>
-          </div>
-          <div class="regua-trilho" id="c1-trilho">
-            <input type="range" id="c1-queda" min="0" max="3" step="0.1" value="1" aria-describedby="c1-frase">
-            <span class="regua-marca" id="c1-marca" aria-hidden="true"><i></i><b id="c1-marca-v">0,9</b></span>
-          </div>
-          <div class="regua-escala" aria-hidden="true"><span style="--k:0">0</span><span style="--k:1">1</span><span style="--k:2">2</span><span style="--k:3">3</span></div>
-          <div class="regua-zonas" aria-hidden="true">
-            <span class="z-ok" id="c1-z-ok">O bump compensa</span>
-            <span class="z-perde" id="c1-z-perde">O bump não compensa</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="c1-dir">
-        <div class="quadro" id="c1-quadro">
-          <div class="linha" data-c="A">
-            <div class="l-nome"><span class="letra">A</span><span><b>Sem order bump</b><small><span class="num" data-pedidos></span> pedidos</small></span></div>
-            <div class="l-receita num" data-receita></div>
-            <div class="l-dif num" data-dif></div>
-            <div class="l-barra"><i class="zero"></i><b class="fill" data-fill></b></div>
-          </div>
-          <div class="linha" data-c="B">
-            <div class="l-nome"><span class="letra">B</span><span><b>Com order bump, conversão igual</b><small><span class="num" data-pedidos></span> pedidos</small></span></div>
-            <div class="l-receita num" data-receita></div>
-            <div class="l-dif num" data-dif></div>
-            <div class="l-barra"><i class="zero"></i><b class="fill" data-fill></b></div>
-          </div>
-          <div class="linha" data-c="C">
-            <div class="l-nome"><span class="letra">C</span><span><b data-nome-c>Com order bump, conversão cai</b><small><span class="num" data-pedidos></span> pedidos</small></span></div>
-            <div class="l-receita num" data-receita></div>
-            <div class="l-dif num" data-dif></div>
-            <div class="l-barra"><i class="zero"></i><b class="fill" data-fill></b></div>
-          </div>
-        <div class="quadro-eixo" aria-hidden="true"><span class="e-menos">menos receita que A</span><span class="e-zero">igual a A</span><span class="e-mais">mais receita que A</span></div>
-        </div>
-        <p class="frase-conta" id="c1-frase" aria-live="polite"></p>
-      </div>
-
-      <div class="c1-base">
-        <div class="params" id="c1-params"></div>
-        <p class="fonte">Fonte da conta: <a href="https://blog.youshop.co/order-bump-e-upsell-no-checkout/" target="_blank" rel="noopener">Blog da YouShop — Order bump e upsell: como aumentar o ticket médio sem perder conversão</a>. Os números do artigo são hipotéticos.</p>
-      </div>
-    </section>
-
-    <!-- Cena 2 — Sugestões -->
-    <section class="cena c2" id="cena-2" aria-labelledby="t2" hidden>
-      <header class="c2-cab">
-        <h1 class="titulo" id="t2">A IA sugere a oferta. As regras conferem se ela pode ir ao teste.</h1>
-        <p class="c2-principal" id="c2-principal"></p>
-      </header>
-
-      <div class="c2-faixa">
-        <p class="faixa-rotulo"><b>A IA sugere</b><span id="c2-rotulo-ia"></span></p>
-        <div class="c2-origens" id="c2-origens"></div>
-      </div>
-
-      <div class="c2-faixa c2-regras">
-        <p class="faixa-rotulo"><b>A regra confere</b><span>Estas contas rodam de verdade nesta página, com os dados do catálogo fictício.</span></p>
-        <div class="tabela-regras" id="c2-tabela" role="table" aria-label="Catálogo e regras de elegibilidade"></div>
-      </div>
-    </section>
-
-    <!-- Cena 3 — Experimento -->
-    <section class="cena c3" id="cena-3" aria-labelledby="t3" hidden>
-      <header class="c3-cab">
-        <div class="c3-tit">
-          <h1 class="titulo" id="t3">14 dias de teste, com o tráfego dividido ao meio</h1>
-        </div>
-        <div class="c3-controles">
-          <div class="c3-botoes">
-            <button type="button" class="btn primario" id="btn-rodar">Rodar experimento</button>
-            <button type="button" class="btn" id="btn-pular">Pular para o fim</button>
-          </div>
-          <div class="c3-volume">
-            <div class="seg" role="group" aria-label="Volume de tráfego" id="seg-volume">
-              <button type="button" data-volume="grande" aria-pressed="true">Campanha grande</button>
-              <button type="button" data-volume="pequeno" aria-pressed="false">Produtor pequeno</button>
-            </div>
-            <p class="c3-volume-nota" id="c3-volume-nota"></p>
-          </div>
-          <button type="button" class="btn texto" id="btn-prem" aria-expanded="false" aria-controls="prem">Premissas</button>
-        </div>
-        <div class="prem" id="prem" hidden>
-          <p class="prem-tit">Premissas do experimento. Mudar qualquer valor refaz as contas na hora.</p>
-          <div class="prem-grade" id="prem-grade"></div>
-          <button type="button" class="btn texto" id="btn-prem-padrao">Voltar aos valores padrão</button>
-        </div>
-      </header>
-
-      <p class="formula-sobra"><b>Sobra por checkout</b> = (receita − custo dos produtos − comissão do creator − reembolsos e chargebacks) ÷ checkouts iniciados. O tratamento vê a oferta nova; o controle fica como estava.</p>
-
-      <div class="c3-paineis" id="c3-paineis"></div>
-
-      <p class="c3-amostra" id="c3-amostra"></p>
-    </section>
-
-    <!-- Cena 4 — Decisão -->
-    <section class="cena c4" id="cena-4" aria-labelledby="t4" hidden>
-      <header class="c4-cab">
-        <h1 class="titulo" id="t4">Cada oferta termina em um veredito. Quem publica é o produtor.</h1>
-      </header>
-      <div class="c4-cartoes" id="c4-cartoes"></div>
-      <p class="fecho" id="c4-fecho">A IA sugere. O teste decide. O produtor aprova.</p>
-    </section>
-
-  </main>
-
-  <footer class="rodape">
-    <p class="assinatura">Feito por Fábio Roberto para o Desafio de Inovação YouShop 2027</p>
-    <div class="rodape-nav">
-      <button type="button" class="btn texto" id="btn-ant">Cena anterior</button>
-      <button type="button" class="btn texto" id="btn-prox">Próxima cena</button>
-    </div>
-  </footer>
-
-  <script src="calc.js"></script>
-  <script src="dados.js"></script>
-  <script src="app.js"></script>
+  <div id="raiz"></div>
 </body>
 </html>
