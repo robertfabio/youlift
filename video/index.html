@@ -26,6 +26,7 @@
   h2 span { display: inline-block; background: var(--lima); color: var(--fundo); border-radius: 9px; padding: 3px 11px; margin-right: 10px; font-size: .78em; vertical-align: 2px; }
   .sub { margin: 0 0 12px; font-weight: 600; font-size: clamp(15px, 2.1vw, 18px); opacity: .85; }
   .quadro { width: 100%; aspect-ratio: 16 / 9; background: #06101f; border-radius: 22px; overflow: hidden; box-shadow: 0 24px 60px rgba(0, 0, 0, .45); }
+  .quadro.vertical { aspect-ratio: 9 / 16; width: min(430px, 100%); margin: 0 auto; }
   .quadro video { width: 100%; height: 100%; display: block; background: #000; }
   section + section { margin-top: 44px; }
   .aviso { margin: 14px 0 0; padding: 14px 18px; border-left: 5px solid var(--lima); background: rgba(255, 255, 255, .07); border-radius: 0 12px 12px 0; font-weight: 600; font-size: clamp(15px, 2.1vw, 18px); line-height: 1.45; }
@@ -43,10 +44,10 @@
   </header>
 
   <section>
-    <h2><span>3 min</span>Vídeo de vendas</h2>
-    <p class="sub">A ideia inteira, direto ao ponto. Narração gerada por IA, com legenda.</p>
-    <div class="quadro">
-      <video controls playsinline preload="metadata" poster="capa.jpg" src="pitch-curto.mp4"></video>
+    <h2><span>55 s</span>O YouLift em menos de um minuto</h2>
+    <p class="sub">A ideia inteira, no formato de Reels. Narração gerada por IA, com legenda.</p>
+    <div class="quadro vertical">
+      <video controls playsinline preload="metadata" src="pitch-reels.mp4"></video>
     </div>
   </section>
 
