@@ -1,0 +1,380 @@
+WEBVTT
+
+00:00:00.100 --> 00:00:02.300
+Oi, pessoal da YouShop,
+tudo bem com vocês?
+
+00:00:02.500 --> 00:00:05.880
+Meu nome é Fábio, e eu
+achei no blog de vocês
+
+00:00:05.900 --> 00:00:11.380
+a conta que vocês mesmos mostram
+
+00:00:11.400 --> 00:00:14.900
+como o produtor vende
+menos tentando vender mais.
+
+00:00:15.000 --> 00:00:17.570
+Antes, quem está falando.
+
+00:00:17.620 --> 00:00:22.390
+Sou desenvolvedor, sou founder e estudo
+Ciência da Computação na federal.
+
+00:00:22.440 --> 00:00:27.220
+Construo produto de inteligência
+artificial do zero até o ar.
+
+00:00:27.270 --> 00:00:30.320
+Já lancei aplicativo em iOS e Android.
+
+00:00:30.370 --> 00:00:34.470
+Eu gosto de gente
+tanto quanto de código.
+
+00:00:34.520 --> 00:00:39.280
+Já liderei time, já trabalhei com equipe
+e fundei o centro acadêmico do curso de
+
+00:00:39.280 --> 00:00:39.920
+Computação.
+
+00:00:39.970 --> 00:00:42.150
+E é isso que eu quero
+trazer para a YouShop.
+
+00:00:42.170 --> 00:00:50.380
+Pra esse desafio eu li o blog, a central
+de ajuda e os termos da YouShop, e
+
+00:00:50.380 --> 00:00:55.450
+comparei com o que os
+concorrentes documentam.
+
+00:00:55.650 --> 00:00:58.690
+Um artigo do blog me fez parar.
+
+00:01:01.170 --> 00:01:10.730
+É o de order bump, aquela oferta extra
+que aparece no checkout antes de pagar.
+
+00:01:10.920 --> 00:01:12.400
+E ele traz uma conta.
+
+00:01:12.590 --> 00:01:23.870
+Mil checkouts, 20% de
+conversão, ticket de 197 reais.
+
+00:01:23.890 --> 00:01:29.330
+Sem bump, a loja fatura 39.400.
+
+00:01:29.350 --> 00:01:37.920
+Com um bump de 37
+reais, sobe pra 41.250.
+
+00:01:37.940 --> 00:01:41.990
+Até aqui, tudo certo.
+
+00:01:42.010 --> 00:01:43.830
+Agora olha a terceira linha.
+
+00:01:44.250 --> 00:02:01.780
+Se por causa do bump a conversão cair
+um ponto, de 20 pra 19, a loja fatura
+
+00:02:01.780 --> 00:02:03.390
+39.187.
+
+00:02:03.590 --> 00:02:07.450
+Menos do que faturava sem bump nenhum.
+
+00:02:07.650 --> 00:02:10.690
+Eu refiz essa conta pra achar o limite.
+
+00:02:10.710 --> 00:02:16.730
+Com esses números, o bump só se paga
+se a conversão cair menos de 0,9 ponto.
+
+00:02:16.750 --> 00:02:22.930
+Passou disso, é prejuízo
+com cara de lucro.
+
+00:02:23.200 --> 00:02:25.220
+Quem sente isso é o produtor.
+
+00:02:25.410 --> 00:02:29.350
+Pelo que a documentação mostra, é
+ele quem escolhe a oferta, na mão.
+
+00:02:29.800 --> 00:02:33.850
+E tem um detalhe: ele comemora.
+
+00:02:34.300 --> 00:02:38.440
+Liga o bump, vê o ticket médio
+subir e acha que deu certo.
+
+00:02:38.630 --> 00:02:42.870
+O ponto de conversão que foi
+embora quase nunca aparece pra ele.
+
+00:02:43.060 --> 00:02:49.380
+O próprio artigo avisa: "a decisão de
+qual oferta usar continua sendo sua".
+
+00:02:49.560 --> 00:02:53.420
+E essa decisão fica mais
+difícil com creators.
+
+00:02:53.600 --> 00:03:00.590
+Até onde eu vi, quem chegou por um vídeo
+de skincare e quem chegou por um vídeo
+
+00:03:00.590 --> 00:03:05.220
+de viagem cai no mesmo
+checkout e vê a mesma oferta.
+
+00:03:05.400 --> 00:03:11.140
+O que se perde é venda do produtor,
+comissão do creator e volume aprovado na
+
+00:03:11.140 --> 00:03:11.740
+YouShop.
+
+00:03:11.760 --> 00:03:19.600
+E é uma perda difícil de enxergar, porque
+o número que todo mundo olha melhorou.
+
+00:03:19.800 --> 00:03:22.760
+A minha proposta se chama YouLift.
+
+00:03:22.980 --> 00:03:27.920
+Ela faz sozinha o teste que o artigo
+manda o produtor fazer na mão.
+
+00:03:28.120 --> 00:03:29.980
+São três passos.
+
+00:03:31.680 --> 00:03:39.480
+Um: a IA lê o catálogo e o contexto
+da campanha e sugere a oferta.
+
+00:03:39.680 --> 00:03:43.540
+Pra quem veio do creator
+de skincare, o refil.
+
+00:03:43.720 --> 00:03:46.580
+Pra quem veio do de
+viagem, a necessaire.
+
+00:03:46.740 --> 00:03:52.800
+Esse é o trabalho da IA aqui: ler descrição
+de produto e entender o que combina
+
+00:03:52.800 --> 00:03:53.550
+com o quê.
+
+00:03:53.740 --> 00:03:55.620
+Regra fixa não faz isso bem.
+
+00:03:55.810 --> 00:03:58.050
+Dois: a oferta nova
+não vai pra todo mundo.
+
+00:03:58.620 --> 00:04:06.360
+Uma parte do tráfego vê, a outra continua
+como estava, pra servir de comparação.
+
+00:04:06.540 --> 00:04:08.980
+Três: quem escolhe a
+vencedora é a conta.
+
+00:04:09.180 --> 00:04:15.940
+E a conta é quanto sobra de verdade
+por checkout iniciado, depois de custo,
+
+00:04:15.940 --> 00:04:18.880
+comissão, reembolso e chargeback.
+
+00:04:18.900 --> 00:04:20.440
+Agora olha o que acontece na demo.
+
+00:04:20.460 --> 00:04:26.600
+A oferta que mais gente aceitou foi
+justamente a que derrubou a conversão.
+
+00:04:26.780 --> 00:04:31.010
+O sistema pausa ela sozinho e
+volta pro que já funcionava.
+
+00:04:31.030 --> 00:04:36.630
+A IA sugere, o teste decide, e nada
+vai pro ar sem o produtor aprovar.
+
+00:04:37.060 --> 00:04:40.340
+E daqui a pouco eu conto o que
+me faria desistir dessa ideia.
+
+00:04:40.360 --> 00:04:41.560
+Por que eu?
+
+00:04:41.690 --> 00:04:45.590
+Porque essa ideia pede
+três coisas que eu já fiz.
+
+00:04:47.110 --> 00:04:50.670
+IA que executa tarefa de
+verdade, com gente aprovando.
+
+00:04:51.210 --> 00:04:55.640
+Sistema que aguenta muita gente
+ao mesmo tempo sem travar.
+
+00:04:55.660 --> 00:04:59.660
+E tela que vende, porque oferta no
+checkout é design antes de ser algoritmo.
+
+00:04:59.680 --> 00:05:01.490
+E tem a demo.
+
+00:05:01.780 --> 00:05:11.330
+Ela funciona, eu montei pra esse desafio
+usando IA do começo ao fim, e o link tá
+
+00:05:11.330 --> 00:05:13.450
+junto com o vídeo.
+
+00:05:13.880 --> 00:05:15.580
+Essa não foi a minha primeira ideia.
+
+00:05:15.960 --> 00:05:18.200
+Foi a trigésima nona.
+
+00:05:18.650 --> 00:05:24.950
+Eu mapeei 38 ideias pra YouShop
+e descartei todas. Dois exemplos.
+
+00:05:25.330 --> 00:05:31.690
+Recuperar Pix e boleto com IA:
+vocês já lançaram o LTV Machine.
+
+00:05:33.410 --> 00:05:39.160
+Conciliação financeira: é uma dor que
+o próprio desafio cita, mas sem dado
+
+00:05:39.160 --> 00:05:42.390
+interno eu não teria
+como provar o valor.
+
+00:05:42.580 --> 00:05:45.620
+E a trigésima nona
+também começou errada.
+
+00:05:45.810 --> 00:05:48.230
+Era order bump com IA,
+só recomendando produto.
+
+00:05:48.250 --> 00:05:55.400
+A Yampi já documenta, e recomendar não
+resolve o risco daquela terceira linha.
+
+00:05:56.180 --> 00:05:58.620
+O YouLift nasceu quando
+eu voltei pra tabela.
+
+00:05:58.810 --> 00:06:02.250
+Como saber se funcionou?
+
+00:06:02.450 --> 00:06:08.470
+Um número tem que subir: quanto sobra
+por checkout iniciado, comparado com o
+
+00:06:08.470 --> 00:06:10.980
+grupo que não viu a oferta nova.
+
+00:06:11.600 --> 00:06:16.400
+E um número não pode cair: a
+conversão da venda principal.
+
+00:06:16.850 --> 00:06:17.750
+Tem um porém.
+
+00:06:18.330 --> 00:06:23.090
+Pra enxergar um ponto de queda com
+segurança, o teste precisa de uns 20 mil
+
+00:06:23.090 --> 00:06:24.590
+checkouts em cada grupo.
+
+00:06:24.760 --> 00:06:28.000
+Um produtor sozinho quase
+nunca tem esse volume.
+
+00:06:28.020 --> 00:06:29.420
+A plataforma tem.
+
+00:06:29.620 --> 00:06:34.920
+Se o volume não chegar, a resposta é
+"inconclusivo" e fica tudo como estava.
+
+00:06:35.370 --> 00:06:43.330
+Agora a parte que costuma ficar de fora
+de pitch: onde isso pode dar errado.
+
+00:06:43.750 --> 00:06:53.120
+Eu não tenho acesso aos dados da YouShop,
+então todo número da demo é simulado.
+
+00:06:53.320 --> 00:06:56.160
+E pode ser que vocês já
+testem isso por dentro.
+
+00:06:56.180 --> 00:06:58.480
+O que me faria desistir:
+
+00:06:58.760 --> 00:07:05.390
+descobrir que isso já existe aí dentro,
+ou que a diferença entre um creator e
+
+00:07:05.390 --> 00:07:08.960
+outro é pequena demais
+pra pagar o teste.
+
+00:07:09.150 --> 00:07:11.130
+É a primeira coisa que eu
+quero perguntar no painel.
+
+00:07:11.150 --> 00:07:17.940
+Nos cuidados: a IA usa contexto de
+campanha e de produto, nunca perfil pessoal
+
+00:07:17.940 --> 00:07:19.050
+do comprador.
+
+00:07:19.250 --> 00:07:23.740
+Uma oferta por vez, sem escassez falsa.
+
+00:07:23.920 --> 00:07:29.580
+E preço, comissão e publicação
+ficam com regra fixa e com gente.
+
+00:07:29.980 --> 00:07:32.000
+O modelo não decide nenhum dos três.
+
+00:07:32.180 --> 00:07:37.320
+A tabela de vocês mostra que dá pra
+vender menos tentando vender mais.
+
+00:07:37.830 --> 00:07:40.870
+O YouLift é a trava pra
+essa terceira linha.
+
+00:07:41.070 --> 00:07:42.470
+O link da demo tá aqui.
+
+00:07:42.680 --> 00:07:46.730
+Mexe nos números, a conta é de vocês.
+
+00:07:46.750 --> 00:07:50.690
+Eu quero construir isso
+com vocês. Obrigado.
